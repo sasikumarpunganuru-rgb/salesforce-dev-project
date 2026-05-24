@@ -1,0 +1,23 @@
+<template>
+    <lightning-input
+        label="Search Contact"
+        value={searchKey}
+        onchange={handleSearchInput}
+        placeholder="Type at least 3 letters..."
+    ></lightning-input>
+
+    <template if:true={showList}>
+        <div class="dropdown">
+            <template for:each={contacts} for:item="con">
+                <div 
+                    key={con.Id}
+                    class="dropdown-item"
+                    data-id={con.Id}
+                    onclick={handleContactSelect}
+                >
+                    {con.Name}
+                </div>
+            </template>
+        </div>
+    </template>
+</template>

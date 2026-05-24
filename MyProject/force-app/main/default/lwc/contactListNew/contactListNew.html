@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Contact Viewer">
+        <template if:true={loading}>
+            <lightning-spinner alternative-text="Loading..." size="small"></lightning-spinner>
+        </template>
+
+        <template if:false={loading}>
+            <lightning-input class="search-box" label="Search Contact" placeholder="Start typing..."></lightning-input>
+
+            <template if:true={contacts}>
+                <ul>
+                    <template for:each={contacts} for:item="con">
+                        <li key={con.Id}>
+                            {con.Name} - {con.Email}
+                        </li>
+                    </template>
+                </ul>
+            </template>
+
+            <template if:true={error}>
+                <p style="color: red;">Error loading contacts: {error.message}</p>
+            </template>
+        </template>
+    </lightning-card>
+</template>

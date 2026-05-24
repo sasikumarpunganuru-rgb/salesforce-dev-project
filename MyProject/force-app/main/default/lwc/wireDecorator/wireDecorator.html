@@ -1,0 +1,38 @@
+<template>
+
+    <lightning-card variants="Narrow" title="@WireDecorator">
+
+        <div class="slds-border_top"></div>
+
+     <div class="slds-var-p-around_medium" >
+
+
+
+        <template  for:each={getAccountData.data} for:item="acc">
+
+            <ol key={acc.Id}>
+
+               
+
+                <lightning-card  variants="Narrow" title={acc.Name} icon-name="standard:account">
+
+                   <p>Rating : {acc.Rating}</p>
+
+                   <p>Id : {acc.Id}</p>
+                   <p>Message : {message}</p>
+
+                </lightning-card>
+
+                <div class="slds-border_bottom"></div>
+
+            </ol>
+
+         </template>
+
+     </div>  
+
+     
+
+    </lightning-card>
+
+</template>

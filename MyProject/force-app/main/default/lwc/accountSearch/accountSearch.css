@@ -1,0 +1,17 @@
+.dropdown {
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+    margin-top: 0.25rem;
+    max-height: 150px;
+    overflow-y: auto;
+    background: white;
+}
+
+.dropdown-item {
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.dropdown-item:hover {
+    background-color: #f4f6f9;
+}

@@ -1,0 +1,21 @@
+<template>
+    <lightning-card>
+        <div slot="title">Calculator</div>
+        
+       <lightning-button label="cancel" name="reset" onclick={handleReset}></lightning-button>
+        <c-api-Example result={result}></c-api-Example>
+        <lightning-input  value={firstnumber} name="fname" label="enter first number" onchange={handlerchange}></lightning-input>
+        <lightning-input value={secondnumber} name="sname" label="enter second number" onchange={handlerchange}></lightning-input>
+        </lightning-card>
+    <lightning-card>
+<lightning-button label="+" name="add" onclick={handlerchange}></lightning-button>
+<lightning-button label="-" name="sub" onclick={handlerchange}></lightning-button>
+<lightning-button label="*" name="mul" onclick={handlerchange}></lightning-button>
+<lightning-button label="/" name="div" onclick={handlerchange}></lightning-button>
+<lightning-button label="%" name="per" onclick={handlerchange}></lightning-button>
+  
+     </lightning-card>
+
+
+
+</template>

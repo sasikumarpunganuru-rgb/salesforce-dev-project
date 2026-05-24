@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Customer Feedback">
+        <div class="slds-p-around_medium">
+            <lightning-input label="Name" value={name} onchange={handleChange} data-field="name"></lightning-input>
+            <lightning-input label="Email" type="email" value={email} onchange={handleChange} data-field="email"></lightning-input>
+            <lightning-textarea label="Feedback" value={feedback} onchange={handleChange} data-field="feedback"></lightning-textarea>
+            <lightning-button label="Submit" onclick={handleSubmit} class="slds-m-top_medium"></lightning-button>
+            <template if:true={successMessage}>
+                <p class="slds-text-color_success slds-m-top_small">{successMessage}</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

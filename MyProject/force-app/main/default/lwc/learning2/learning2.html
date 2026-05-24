@@ -1,0 +1,10 @@
+<template>
+    <lightning-card>
+        <lightning-input type ='checkbox' label="show details" onchange={getinfo}></lightning-input>
+        <div type='checkbox'></div>
+        <template if:true={flag}>
+            this is selected checkbox
+        </template>
+        <template if:false={flag}>this is not selected checkbox</template>    
+    </lightning-card>
+</template>

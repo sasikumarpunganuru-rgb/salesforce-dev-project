@@ -1,0 +1,37 @@
+<template>
+    <lightning-card title="LWC Contact List">
+        <div class="slds-m-around_medium">
+            
+            <!-- Input Field for New Contact -->
+            <lightning-input 
+                label="Enter Contact Name" 
+                value={newContact} 
+                onchange={handleInputChange}>
+            </lightning-input>
+
+            <!-- Add Contact Button -->
+            <lightning-button 
+                label="Add Contact" 
+                onclick={addContact} 
+                class="slds-m-top_medium">
+            </lightning-button>
+
+            <!-- Contact List -->
+            <ul class="slds-m-top_medium">
+                <template for:each={contacts} for:item="contact">
+                    <li key={contact.id} class="slds-m-bottom_small">
+                        <lightning-badge label={contact.name}></lightning-badge>
+                        <lightning-button-icon 
+                            icon-name="utility:delete" 
+                            alternative-text="Delete" 
+                            class="slds-m-left_small"
+                            onclick={removeContact}
+                            data-id={contact.id}>
+                        </lightning-button-icon>
+                    </li>
+                </template>
+            </ul>
+
+        </div>
+    </lightning-card>
+</template>

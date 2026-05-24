@@ -1,0 +1,21 @@
+h1{
+    font-size: xx-large;
+    font-variant-caps: all-petite-caps;
+    background-color: rgb(240, 245, 245);
+}
+p{
+    font-size: xx-large;
+    font-variant-caps: all-petite-caps;
+    background-color: rgb(255, 119, 0);
+}
+h2{
+    font-size: xx-large;
+    font-variant-caps: all-petite-caps;
+    background-color: rgb(0, 255, 68);
+}
+.Container{
+    
+min-height: 10cm;
+display: table-cell;
+vertical-align: middle;
+}

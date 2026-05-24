@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="LeadCreation">
+        <p class="slds-p-horizonatl_small">
+ 
+            <lightning-record-form object-api-name={objectApiName} fields={fieldList}  assignment-rule-id={assignmentRuleId} onsuccess={handleLeadCreate}></lightning-record-form>
+        </p>
+
+    </lightning-card>
+</template>

@@ -1,0 +1,56 @@
+<template>
+
+    <div class="slds-grid slds-align_absolute-center">
+
+        <div class="slds-size_1-of-2">
+
+            <lightning-card title="Item List @track decorator" icon-name="standard:task2">
+
+                <div class="slds-var-p-around_medium">
+
+                    <lightning-input class="slds-var-m-bottom_small" label="GROCERIES lIST" onchange={handleChange}></lightning-input>
+
+                    <lightning-button label="Add Item" onclick={addItemToList}></lightning-button>
+
+                    <div class="slds-grid slds-wrap">
+
+                        <div class="slds-size_1-of-1">
+
+                            <div class="slads-text-heading_small slds-var-p-top_medium slds-var-p-bottom_medium">Item List</div>
+
+                            <ol class="slds-list_ordered">
+                                <template for:each={itemList} for:item="item" for:index="i">
+
+    <div key={item.i}>
+
+        <li class="slds-item">
+
+            {item}
+
+        </li>
+
+
+
+    </div>
+
+</template>
+
+</ol>
+
+</div>
+
+</div>
+
+
+
+</div>
+
+</lightning-card>
+
+</div>
+
+
+
+</div>
+
+</template>

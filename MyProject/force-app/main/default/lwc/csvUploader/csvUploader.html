@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Upload Accounts via CSV">
+        <div class="slds-p-around_medium">
+            <lightning-input type="file" accept=".csv" label="Select CSV File" onchange={handleFileUpload}></lightning-input>
+            <template if:true={isLoading}>
+                <p>Processing file...</p>
+            </template>
+            <template if:true={message}>
+                <p>{message}</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>
